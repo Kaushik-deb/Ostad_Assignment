@@ -16,23 +16,4 @@ function modifiedText($text){
 $text = "The quick brown fox jumps over the lazy dog.";
 
 modifiedText($text);
-
-
-// $text = "The quick brown fox jumps over the lazy dog.";
-
-// $newText=strtolower($text);
-// $replaced=str_ireplace("brown","red",$text);
-// echo $newText;
-// echo $replaced;
-
-
-
-
-
-
-
-
-
-
-
 ?>
