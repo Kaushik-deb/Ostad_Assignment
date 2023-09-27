@@ -1,29 +1,21 @@
-<?php 
-// Create a multidimensional array called $studentGrades to store the grades of three students. Each student has grades for three subjects: Math, English, and Science. Write a PHP function which takes "$studentGrades" as an argument to calculate and print the average grade for each student.
+<?php
 
+$studentGrades = array(
+    'Student 1' => array('Math' => 85, 'English' => 92, 'Science' => 78),
+    'Student 2' => array('Math' => 88, 'English' => 95, 'Science' => 90),
+    'Student 3' => array('Math' => 75, 'English' => 80, 'Science' => 88)
+);
+function calculateAndPrintAverages($studentGrades) {
+    foreach ($studentGrades as $student => $grades) {
+        $totalGrades = array_sum($grades);
+        $averageGrade = $totalGrades / count($grades);
 
-function avgMarks($array){
-    $allAvgMarks=[];
-    $a1=array_sum($array[0])/count($array[0]);
-    $a2=array_sum($array[1])/count($array[1]);
-    $a3=array_sum($array[2])/count($array[2]);
-    array_push($allAvgMarks,$a1,$a2,$a3);
-    print_r($allAvgMarks);
-    
+        echo "Student: $student" ;
+        echo "Average Grade: $averageGrade" . "\n";
+    }
 }
-
-$studentGrades=[
-    [40,60,70],
-    [45,55,65],
-    [55,65,75]
-];
-
-print_r(avgMarks($studentGrades));
-
-
-
-
-
+calculateAndPrintAverages($studentGrades);
+?>
 
 
 
