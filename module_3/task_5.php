@@ -12,13 +12,8 @@ function generatePassword($length) {
     }
     
     return $password;
-}
 
-$passwords = [];
-for ($i = 0; $i < 2; $i++) {
-    $passwords[] = generatePassword(12);
 }
-
-print_r($passwords);
+echo generatePassword(12);
 
 ?>
